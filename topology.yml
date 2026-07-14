@@ -3,9 +3,8 @@ name: windows-10-testing-topology
 hosts:
   - name: win10
     base_box:
-      image: windows10
-      mgmt_user: windows
-      mng_protocol: winrm
+      image: OPNsense
+      mgmt_user: freebsd
     flavor: standard.win10
 
 routers:
