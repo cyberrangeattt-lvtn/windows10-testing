@@ -20,7 +20,7 @@ networks:
     cidr: 10.0.0.0/24
 
 net_mappings:
-    - host: image-test
+    - host: win10
       network: network
       ip: 10.0.0.10
 
