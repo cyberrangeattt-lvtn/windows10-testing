@@ -11,22 +11,22 @@ hosts:
 routers:
   - name: router
     base_box:
-      image: debian-10
+      image: debian-12-x86_64
       mgmt_user: debian
     flavor: standard.small
 
 networks:
-  - name: network
-    cidr: 10.0.0.0/24
+  - name: switch
+    cidr: 10.15.0.0/24
 
 net_mappings:
     - host: win10
-      network: network
-      ip: 10.0.0.10
+      network: switch
+      ip: 10.15.0.10
 
 router_mappings:
     - router: router
-      network: network
-      ip: 10.0.0.1
+      network: switch
+      ip: 10.15.0.1
 
 groups: []
