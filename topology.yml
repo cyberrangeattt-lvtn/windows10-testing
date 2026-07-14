@@ -1,0 +1,32 @@
+name: windows-10-testing-topology
+
+hosts:
+  - name: win10
+    base_box:
+      image: windows-10
+      mgmt_user: windows
+      mng_protocol: winrm
+    flavor: standard.win10
+
+routers:
+  - name: router
+    base_box:
+      image: debian-10
+      mgmt_user: debian
+    flavor: standard.small
+
+networks:
+  - name: network
+    cidr: 10.0.0.0/24
+
+net_mappings:
+    - host: image-test
+      network: network
+      ip: 10.0.0.10
+
+router_mappings:
+    - router: router
+      network: network
+      ip: 10.0.0.1
+
+groups: []
