@@ -3,7 +3,7 @@ name: windows-10-testing-topology
 hosts:
   - name: win10
     base_box:
-      image: windows-10
+      image: windows10
       mgmt_user: windows
       mng_protocol: winrm
     flavor: standard.win10
